@@ -1,0 +1,124 @@
+$gz-buttons-colors-primary: (
+  border: $blue,
+  background: $blue,
+  font-color: $black,
+  active-border: $black,
+  active-background: $black,
+  active-font-color: $white,
+);
+
+$gz-buttons-colors-dark: (
+  border: $black,
+  background: $black,
+  font-color: $white,
+  active-border: $black,
+  active-background: $white,
+  active-font-color: $black,
+);
+
+$gz-buttons-colors-inline: (
+  border: $blue,
+  background: transparent,
+  font-color: $blue,
+  active-border: $blue,
+  active-background: $blue,
+  active-font-color: $white,
+);
+
+@mixin gz_button($palette) {
+  $border: map-get($palette, "border");
+  $background: map-get($palette, "background");
+  $font-color: map-get($palette, "font-color");
+  $active-border: map-get($palette, "active-border");
+  $active-background: map-get($palette, "active-background");
+  $active-font-color: map-get($palette, "active-font-color");
+
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 18px;
+  border: 1px solid $border;
+  border-radius: 10px;
+  background-color: $background;
+  color: $font-color;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+  transition: all 220ms ease-in-out;
+
+  &.loading {
+    background-color: $gray !important;
+    border-color: $gray !important;
+    color: $black !important;
+    cursor: progress;
+
+    &::after {
+      animation: moveLeft 1s infinite !important;
+    }
+  }
+
+  &.gz-btn-small {
+    padding: 0.8em 3em;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 229, 74, 1) 0%,
+      rgba(255, 229, 74, 1) 33%,
+      rgba(255, 77, 77, 1) 33%,
+      rgba(255, 77, 77, 1) 66%,
+      rgba(80, 168, 255, 1) 66%,
+      rgba(80, 168, 255, 1) 100%
+    );
+    transform: skew(-10deg, 0deg) translateX(-105%);
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $active-border;
+    border-radius: 10px;
+    background-color: $active-background;
+    color: $active-font-color;
+    text-decoration: none;
+  }
+
+  &:hover::after {
+    animation: moveLeft 1s;
+  }
+
+  &:active,
+  &:focus {
+    // outline: none;
+  }
+}
+
+@mixin gz_button_icon() {
+  background: transparent;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.gz-btn {
+  @include gz_button($gz-buttons-colors-primary);
+}
+
+.gz-btn-dark {
+  @include gz_button($gz-buttons-colors-dark);
+}
+
+.gz-btn-inline {
+  @include gz_button($gz-buttons-colors-inline);
+}
+
+.gz-btn-icon {
+  @include gz_button_icon();
+}

@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $white;
+  font-size: 1em;
+  line-height: 1.2;
+  background-color: $black;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+@include mq-for-size(sm) {
+  html {
+    font-size: 1.2em;
+  }
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 80px 15px;
+  margin: 0 auto;
+}

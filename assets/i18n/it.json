@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "Ciao, sono Giacomo",
+    "subtitle": "Web Developer",
+    "description": "Web Developer con la passione per la tecnologia, in Sardegna",
+    "contactMe": "Contattami"
+  },
+  "aboutMe": {
+    "smallDescription": "Ciao! Sono un Web Developr con la passione per la tecnologia.",
+    "description": "Lavoro da anni nel campo dell'IT e ho un'ottima conoscenza della programmazione web. Nella mia carriera ho sviluppato applicazioni front end, applicazioni mobile ibride, API RESTful e automatizzato i processi di sviluppo attraverso la continuous integration e il continuous deployment."
+  },
+  "skills": {
+    "title": "Competenze principali",
+    "frontend": {
+      "altText": "Front-End Development",
+      "title": "Front-End",
+      "description": "Dal mockup al codice, creo interfacce pixel perfect, siti web e applicazioni web utilizzando le tecnologie più recenti disponibili e seguendo le principali regole di usabilità"
+    },
+    "backend": {
+      "altText": "Back-End Development",
+      "title": "Back-End",
+      "description": "Dall'analisi dei requisiti alla scrittura del codice, posso sviluppare applicazioni rapide e stabili, automatizzare processi, implementare API RESTful e velocizzare il deploy utilizzando tecniche di continuous integration e continuous deployment."
+    }
+  },
+  "footer": {
+    "privacy": "Privacy policy"
+  },
+  "errors": {
+    "404": {
+      "title": "Pagina non trovata",
+      "action": "Torna alla home page"
+    }
+  }
+}
