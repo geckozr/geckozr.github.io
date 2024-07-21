@@ -25,7 +25,7 @@
 <style scoped lang="scss">
 .main-header {
   display: grid;
-  height: 750px;
+  height: 450px;
   position: relative;
   background: url("~/public/img/logo.svg");
   background-position: center;
@@ -64,7 +64,11 @@
   }
 }
 
-@include mq-for-size(sm) {
+@include mq-for-size(md) {
+  .main-header {
+    height: 750px;
+  }
+
   .title {
     h1 {
       font-size: 60px;
