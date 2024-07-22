@@ -20,7 +20,17 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxtjs/i18n"],
+  modules: [
+    "@nuxtjs/i18n",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          "Ubuntu+Mono": true,
+        },
+      },
+    ],
+  ],
   i18n: {
     defaultLocale: "en",
     baseUrl: "https://geckozr.github.io",
