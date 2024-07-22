@@ -36,6 +36,7 @@ function generateShapes() {
     shape.style.top = initialPosition.top;
     shape.style.width = `${getRandomInRange(0.8, 1.5)}em`;
     shape.style.height = shape.style.width;
+    shape.style.opacity = getRandomInRange(0.85, 1);
 
     shapesContainer.value?.append(shape);
 
@@ -54,7 +55,9 @@ function generateShapes() {
         },
       ],
       {
-        duration: (Math.random() + 1) * 5000,
+        duration: Math.floor(
+          (Math.random() + 1) * (getRandomInRange(8, 10) * 1000)
+        ),
         direction: "alternate",
         fill: "both",
         iterations: Infinity,
@@ -63,32 +66,6 @@ function generateShapes() {
       }
     );
   }
-
-  /* shapes.forEach((shape) => {
-    const destination = getRandomOutsideDestination(
-      containerWidth,
-      containerHeight
-    );
-
-    shape.animate(
-      [
-        { transform: "translate(0, 0)" },
-        {
-          transform: `translate(${
-            destination.x - parseFloat(shape.style.left)
-          }px, ${destination.y - parseFloat(shape.style.top)}px)`,
-        },
-      ],
-      {
-        duration: (Math.random() + 1) * 5000, // random duration
-        direction: "alternate",
-        fill: "both",
-        iterations: Infinity,
-        easing: "linear",
-        delay: getRandomInRange(0, 220),
-      }
-    );
-  }); */
 }
 
 function getRandomInRange(min: number, max: number): number {

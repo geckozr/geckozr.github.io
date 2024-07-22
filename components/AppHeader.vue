@@ -39,6 +39,21 @@
     right: 0;
     bottom: 0;
     z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute !important;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgb(50, 50, 50);
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0) 65%,
+        rgb(50, 50, 50) 100%
+      );
+    }
   }
 
   #canvas {
