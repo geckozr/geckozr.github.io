@@ -18,13 +18,26 @@
           <p>
             {{ $t("skills.frontend.description") }}
           </p>
-          <img
-            src="~/public/img/skills/angular.svg"
-            alt="Angular"
-            title="Angular"
-          />
-          <img src="~/public/img/skills/html5.svg" alt="HTML5" title="HTML5" />
-          <img src="~/public/img/skills/ionic.svg" alt="Ionic" title="Ionic" />
+          <div class="skill-logos">
+            <img
+              class="skill-logo"
+              src="~/public/img/skills/angular.svg"
+              alt="Angular"
+              title="Angular"
+            />
+            <img
+              class="skill-logo"
+              src="~/public/img/skills/html5.svg"
+              alt="HTML5"
+              title="HTML5"
+            />
+            <img
+              class="skill-logo"
+              src="~/public/img/skills/ionic.svg"
+              alt="Ionic"
+              title="Ionic"
+            />
+          </div>
         </div>
 
         <div
@@ -42,17 +55,26 @@
           <p>
             {{ $t("skills.backend.description") }}
           </p>
-          <img
-            src="~/public/img/skills/nodejs.svg"
-            alt="NodeJs"
-            title="NodeJs"
-          />
-          <img src="~/public/img/skills/php.svg" alt="PHP" title="PHP" />
-          <img
-            src="~/public/img/skills/gitlab.svg"
-            alt="Gitlab CI / CD"
-            title="Gitlab CI / CD"
-          />
+          <div class="skill-logos">
+            <img
+              class="skill-logo"
+              src="~/public/img/skills/nodejs.svg"
+              alt="NodeJs"
+              title="NodeJs"
+            />
+            <img
+              class="skill-logo"
+              src="~/public/img/skills/php.svg"
+              alt="PHP"
+              title="PHP"
+            />
+            <img
+              class="skill-logo"
+              src="~/public/img/skills/gitlab.svg"
+              alt="Gitlab CI / CD"
+              title="Gitlab CI / CD"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -135,9 +157,23 @@ function onDarkSideVisibility(state: any) {
       width: 65px;
     }
 
+    img.skill-logo {
+      width: auto;
+      max-width: 65px;
+      height: 40px;
+      margin: 10px 15px 0;
+
+      &:first-of-type {
+        margin-left: 0 !important;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
     p {
       padding-right: 50px;
-      white-space: break-spaces;
     }
 
     &::after {
