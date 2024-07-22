@@ -27,6 +27,7 @@ const availableLocales = [
 
 <style scoped lang="scss">
 .lang-switcher {
+  width: 100%;
   max-width: 1200px;
   text-align: right;
   margin: 0 auto;

@@ -27,10 +27,9 @@
   display: grid;
   height: 450px;
   position: relative;
-  background: url("~/public/img/logo.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 185px;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+  align-items: center;
 
   .background-decoration {
     position: absolute !important;
@@ -65,6 +64,10 @@
 .title {
   padding: 70px 0px;
   margin: 0 auto;
+  background: url("~/public/img/logo.svg");
+  background-position: 40% center;
+  background-repeat: no-repeat;
+  background-size: 185px;
 
   h1 {
     font-size: 32px;
